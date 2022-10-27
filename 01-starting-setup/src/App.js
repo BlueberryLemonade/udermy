@@ -25,10 +25,20 @@ function App() {
     },
   ];
 
+  const dataHandler = (incomingData) => {
+
+    const incomingExpense = incomingData;
+      expenses.push(incomingExpense);
+      console.log(expenses);
+    
+  }
+
+ 
+
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onDataReceieved={dataHandler}/>
       <Expenses expenses={expenses} />
       
        </div>
