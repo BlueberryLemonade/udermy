@@ -1,17 +1,13 @@
 import Years from "./Years";
 
-const ExpenseFilter = () => {
+const ExpenseFilter = (props) => {
 
-    
-
-    const selectionHandler = (selection) => {
-        console.log(selection.target);
-    }
-
-   
+    const optionHandler = (selection) =>
+    props.yearSelection(selection.target.value);
+      
    return (
    <form>
-        <select name='year' id='year' onChange={selectionHandler}>
+        <select name='year' id='year' onChange={optionHandler} >
          <Years />
         </select>
     </form>

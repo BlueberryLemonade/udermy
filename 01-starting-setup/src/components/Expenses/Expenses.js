@@ -4,12 +4,15 @@ import Card from "../UI/Card";
 import ExpenseFilter from "./ExpenseFilter";
 function Expenses(props) {
 
+  const selectionHandler = (selectedYear) =>{
+    console.log("The selected year is: " + selectedYear);
+  }
 
   const expenses = props.expenses;
 
   return (
   <Card className="expenses">
-      <ExpenseFilter/>
+      <ExpenseFilter yearSelection={selectionHandler}/>
     {expenses.map((expense) => (
       <ExpenseItem 
        key={expense.id} 
