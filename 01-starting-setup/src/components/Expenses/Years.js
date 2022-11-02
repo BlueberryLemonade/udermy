@@ -15,7 +15,7 @@ const Years = () => {
     }
 
     //Iterate over the years array and create a list of options for the menu 
-    years.forEach(function (year, index){
+    years.forEach(function (year){
         options.push(<option onChange={selectionHandler} key={year} value={year}>{year}</option>);
        });
 
