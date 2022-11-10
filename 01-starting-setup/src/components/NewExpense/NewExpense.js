@@ -22,7 +22,7 @@ const stopEditingHandler = () =>{
       id: Math.random().toString()
     };
     props.onAddExpense(expenseData);
-    setIsEditing(false);
+    setIsEditing(false)
   };
 
   return (
